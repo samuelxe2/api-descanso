@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Recibido</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #form-data {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        span {
+            font-weight: normal;
+        }
+
+        #datosCliente {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Información del Formulario</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="form-data">
+            <p><strong>Nombre:</strong> <span id="name"></span></p>
+            <p><strong>Número de Teléfono:</strong> <span id="phoneNumber"></span></p>
+            <p><strong>Correo Electrónico:</strong> <span id="email"></span></p>
+            <p><strong>Mensaje:</strong> <span id="message"></span></p>
+        </div>
+    </div>
+
+    <!-- Botón para ver los datos de la base de datos -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <button id="verDatos">Ver Datos de la Base de Datos</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor para mostrar los datos de la base de datos -->
+    <div id="datosCliente" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Datos de la Base de Datos</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>_id</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Dirección</th>
+                            <th>Ciudad</th>
+                            <th>Estado</th>
+                            <th>Código postal</th>
+                            <th>Número de teléfono</th>
+                            <th>Correo electrónico</th>
+                        </tr>
+                    </thead>
+                    <tbody id="datosTabla"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Obtener los parámetros de consulta de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Obtener y mostrar los valores en la página
+        document.getElementById("name").textContent = urlParams.get("Name") || "N/A";
+        document.getElementById("phoneNumber").textContent = urlParams.get("PhoneNumber") || "N/A";
+        document.getElementById("email").textContent = urlParams.get("Email") || "N/A";
+        document.getElementById("message").textContent = urlParams.get("Message") || "N/A";
+
+        // Evento para el botón "Ver Datos de la Base de Datos"
+        document.getElementById("verDatos").addEventListener("click", function() {
+            // Realiza una solicitud GET al servidor para obtener los datos
+            fetch("/api/obtener-datos")
+                .then(response => response.json())
+                .then(data => {
+                    // Muestra los datos en la tabla
+                    const datosTabla = document.getElementById("datosTabla");
+                    datosTabla.innerHTML = ''; // Limpia el contenido previo
+
+                    data.forEach(cliente => {
+                        // Crea una fila de tabla para mostrar cada cliente
+                        const fila = document.createElement("tr");
+
+                        // Agrega cada campo del cliente como una celda de tabla
+                        for (const key in cliente) {
+                            const celda = document.createElement("td");
+                            celda.textContent = cliente[key];
+                            fila.appendChild(celda);
+                        }
+
+                        datosTabla.appendChild(fila); // Agrega la fila a la tabla
+                    });
+                })
+                .catch(error => console.error("Error al obtener datos:", error));
+        });
+    </script>
+</body>
+</html>
+
+

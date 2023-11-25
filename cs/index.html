@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>cs</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <div class="wrapper">
+         <!-- end loader -->
+         <div class="sidebar">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+               <div id="dismiss">
+                  <i class="fa fa-arrow-left"></i>
+               </div>
+               <ul class="list-unstyled components">
+                  <li class="active">
+                     <a href="index.html">Home</a>
+                  </li>
+                  <li>
+                     <a href="#Avisos">Avisos</a>
+                  </li>
+                  <li>
+                     <a href="#Servicios">Servicios</a>
+                  </li>
+                  <li>
+                     <a href="#customer">Nuestros asesores</a>
+                  </li>
+                  <li>
+                     <a href="#contact">Formulario</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+         <div id="content">
+            <!-- header -->
+            <header>
+               <!-- header inner -->
+               <div class="head_top">
+                  <div class="header">
+                     <div class="container-fluid">
+                        <div class="row">
+                           <div class="col-md-3 logo_section">
+                              <div class="full">
+                                 <div class="center-desk">
+                                    <div class="logo">
+                                       <a href="index.html"><img src="images/Pocket Credit.png" alt="#"></a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-9">
+                              <div class="right_header_info">
+                                 <ul>
+                                    <li class="menu_iconb">
+                                       <a href="Javascript:void(0)">Login</a>
+                                    </li>
+                                    <li>
+                                       <button type="button" id="sidebarCollapse">
+                                       <img src="images/menu_icon.png" alt="#" />
+                                       </button>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </header>
+            <!-- end header inner -->
+            <!-- end header -->
+            <section class="slider_section">
+               <div class="banner_main">
+                  <img src="images/portada.png" alt="#"/>
+                  <div class="container-fluid padding3">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <div class="text-bg">
+                              <a href="chatbot.html">Chat bot</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         <!-- Categories -->
+         <!-- casino -->
+         <div id="Servicios" class="casino">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="titlepage">
+                        <h2>Servicios</h2>
+                        <span></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-4 padding_bottom">
+                     <div class="game_box">
+                        <figure><img src="images/Asistente bot.png" alt="#"/></figure>
+                     </div>
+                     <div class="game">
+                        <h3><a href="Javascript:void(1)">Asistente virtual </a></h3>
+                     </div>
+                  </div>
+                  <div class="col-md-4 padding_bottom">
+                     <div class="game_box">
+                        <figure><img src="images/Quejas.jpg" alt="#"/></figure>
+                     </div>
+                     <div class="game">
+                        <h3><a href="Javascript:void(2)">Quejas y Reclamos</a></h3>
+                     </div>
+                  </div> 
+                  <div class="col-md-4 padding_bottom">
+                     <div class="game_box">
+                        <figure><img src="images/Tramites.jpg" alt="#"/></figure>
+                     </div>
+                     <div class="game">
+                        <h3><a href="Javascript:void(3)">Tramites</a></h3>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end casino -->
+         <!-- licens -->
+         <div class="licens">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="titlepage">
+                        <h2>Licencias y reglamentación</h2>
+                        <span></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-12">
+                     <div id="licens" class="carousel slide licens_Carousel " data-ride="carousel">
+                        <ol class="carousel-indicators">
+                           <li data-target="#licens" data-slide-to="0" class="active"></li>
+                           <li data-target="#licens" data-slide-to="1"></li>
+                           <li data-target="#licens" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                           <div class="carousel-item active">
+                              <div class="container">
+                                 <div class="carousel-caption ">
+                                    <div class="row d_flex">
+                                       <div  class="col-md-6">
+                                          <div class="test_box">
+                                             <div class="jons">
+                                                <h4>PROMOCIONES</h4>
+                                             </div>
+                                             <p>¡Estamos emocionados de ofrecerte oportunidades exclusivas! En agradecimiento por tu lealtad, te invitamos a descubrir nuestras promociones especiales. Estas ofertas únicas están diseñadas pensando en ti, para que puedas disfrutar de tus productos y servicios favoritos a precios increíbles. No te pierdas la oportunidad de ahorrar y disfrutar al máximo. Haz clic en el enlace a continuación para acceder a nuestras emocionantes promociones y aprovechar los beneficios que hemos preparado para ti. ¡Es hora de consentirte!.</p>
+                                             <a class="read_more" href="publicidad.html">MÁS INFORMACIÓN AQUÍ</a>
+                                          </div>
+                                       </div>
+                                       <div  class="col-md-6">
+                                          <div class="test_box">
+                                             <div class="jons">
+                                                <figure><img src="images/Promociones.jpg" alt="#"/></figure>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="carousel-item">
+                              <div class="container">
+                                 <div class="carousel-caption">
+                                    <div class="row d_flex">
+                                       <div  class="col-md-6">
+                                          <div class="test_box">
+                                             <div class="jons">
+                                                <h4>Tarjetas Debito y Credito</h4>
+                                             </div>
+                                             <p>¡Descubre un mundo de ventajas con tus tarjetas de débito y crédito! , sabemos lo importante que es simplificar tus transacciones y maximizar tus beneficios. Es por eso que te presentamos promociones exclusivas diseñadas especialmente para usuarios de tarjetas de débito y crédito. Desde descuentos en tus compras favoritas hasta ofertas especiales en restaurantes y viajes, nuestras promociones te brindarán una experiencia financiera excepcional. ¿Quieres aprovechar al máximo tus tarjetas? Haz clic en el enlace a continuación y descubre las promociones que hemos preparado para ti. ¡Es hora de disfrutar de tus tarjetas al máximo!.</p>
+                                             <a class="read_more" href="publicidad.html">MÁS INFORMACIÓN AQUÍ</a>
+                                          </div>
+                                       </div>
+                                       <div  class="col-md-6">
+                                          <div class="test_box">
+                                             <div class="jons">
+                                                <figure><img src="images/Tarjetas.jpg" alt="#"/></figure>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="carousel-item">
+                              <div class="container">
+                                 <div class="carousel-caption">
+                                    <div class="row d_flex">
+                                       <div  class="col-md-6">
+                                          <div class="test_box">
+                                             <div class="jons">
+                                                <h4>Cuenta de Ahorros </h4>
+                                             </div>
+                                             <p>¡Haz que tu dinero trabaje para ti! Con nuestra cuenta de ahorros, podrás alcanzar tus metas financieras de manera más sencilla y eficiente. Queremos recompensar tu compromiso con el ahorro, y por eso hemos creado promociones exclusivas que te ayudarán a hacer crecer tu dinero aún más rápido. Desde tasas de interés preferenciales hasta bonificaciones especiales, nuestras promociones están diseñadas para que aproveches al máximo tu cuenta de ahorros. ¿Estás listo para dar un paso más hacia la seguridad financiera? Haz clic en el enlace a continuación y descubre las promociones que hemos preparado para ti. ¡Es hora de hacer realidad tus sueños financieros con nuestra cuenta de ahorros!</p>
+                                             <a class="read_more" href="publicidad.html">MÁS INFORMACIÓN AQUÍ</a>
+                                          </div>
+                                       </div>
+                                       <div  class="col-md-6">
+                                          <div class="test_box">
+                                             <div class="jons">
+                                                <figure><img src="images/Cuenta de ahorros.png" alt="#"/></figure>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#licens" role="button" data-slide="prev">
+                        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                        </a>
+                        <a class="carousel-control-next" href="#licens" role="button" data-slide="next">
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </a>
+                     </div>
+                     <p class="lorem">La aceptación de estos términos y condiciones es un paso importante y obligatorio para utilizar nuestros servicios. Al hacerlo, te comprometes a cumplir con las políticas y directrices que hemos establecido, lo que garantiza una experiencia segura y satisfactoria para todos nuestros usuarios.
+
+                        Te recomendamos tomarte el tiempo necesario para revisar detenidamente los términos y condiciones antes de proceder. Si tienes alguna pregunta o necesitas aclaraciones sobre algún punto en particular, nuestro equipo de servicio al cliente estará encantado de ayudarte. ¡Gracias por tu comprensión y por elegirnos como tu opción preferida!.</p>
+                  </div>
+                  <div id="Avisos" class="col-md-12">
+                     <ul class="spinit">
+                        <li><a href="Javascript:void(0)">Avisos </a></li>
+                        <li><a href="Javascript:void(0)">Noticias</a></li>
+                        <li><a href="Javascript:void(0)">Nuestras Empresa </a></li>
+                        <li><a href="Javascript:void(0)">Seguros</a></li>
+                     </ul>
+                     <div class="two_box">
+                        <div class="row d_flex">
+                           <div class="col-md-4">
+                              <div class="many_box_img">
+                                 <figure><img src="images/Noticias.jpg" alt="#"/></figure>
+                              </div>
+                           </div>
+                           <div class="col-md-8">
+                              <div class="many_box">
+                                 <p>¡Noticias y Avisos Importantes!
+
+Queremos mantenerte informado sobre las últimas novedades y avisos relevantes. En [nombre de la empresa o plataforma], nos esforzamos por brindarte un servicio de alta calidad y una experiencia excepcional, y parte de eso implica mantener una comunicación clara y transparente.
+
+Por lo tanto, te invitamos a estar al tanto de nuestras últimas noticias y avisos, ya que podrían incluir actualizaciones de servicios, cambios en políticas, eventos especiales, o información relevante que afecte tu experiencia con nosotros.
+
+Para acceder a las últimas noticias y avisos, te recomendamos visitar la sección de noticias en nuestra plataforma o sitio web de forma regular. Estaremos encantados de compartir contigo cualquier información importante que debas conocer.
+
+Gracias por ser parte de nuestra comunidad y por tu continuo apoyo. ¡Tu satisfacción y seguridad son nuestras principales prioridades!
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end lLicens -->
+         <!-- customer -->
+         <div id="customer"  class="customer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="titlepage">
+                        <h2>Nuestros asesores</h2>
+                        <span></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                     <div class="customer_text">
+                        <p>Tu guía personal en el camino financiero. ¿Tienes preguntas o necesitas ayuda? Estamos aquí para ti. Contáctanos en [detalles de contacto] y deja que nuestros expertos te brinden apoyo y orientación personalizada. Tu éxito financiero es nuestra prioridad.</p>
+                        <div class="customer_box">
+                           <i><img src="images/customer.png" alt="#"/></i>
+                           <h4>Pancracio Perecles</h4>
+                           <span>Gerente Comercial</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end customer -->
+         <!-- reqeste -->
+         <div id="contact" class="reqeste">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="titlepage">
+                        <h2>Formulario</h2>
+                        <span></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-6 offset-md-3">
+                     <form id="cochang" class="form_main">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <input class="form_control" placeholder="Name" type="text" name="Name">
+                           </div>
+                           <div class="col-md-12">
+                              <input class="form_control" placeholder="Phone number" type="text" name="Phone number">
+                           </div>
+                           <div class="col-md-12">
+                              <input class="form_control" placeholder="Email" type="text" name="Email">
+                           </div>
+                           <div class="col-md-12">
+                              <input class="form_control" placeholder="Message" type="text" name="Message">
+                           </div>
+                           <div class="col-md-12">
+                              <button class="send_btn" id="send_btn">Send</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end reqeste -->
+         <!--  footer -->
+         <footer>
+            <div class="footer">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ">
+                        <div class="address">
+                           <h3>Subscribe Now</h3>
+                           <form class="newtetter">
+                              <button class="submit">submit</button>
+                              <input class="tetter" placeholder="Enter your email" type="text" name="Enter your email">
+                           </form>
+                        </div>
+                     </div>
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <div class="row">
+                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                              <div class="address">
+                                 <h3>Links</h3>
+                                 <ul class="Menu_footer">
+                                    <li class="active"> <a href="index.html">Home</a> </li>
+                                    <li><a href="#Avisos">Avisos</a> </li>
+                                    <li><a href="#Servicios">Servicios</a> </li>
+                                    <li><a href="#customer">Nuestros asesores</a> </li>
+                                    <li><a href="#conatct">Conatct</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                              <div class="address">
+                                 <h3>Contacta con nosotros</h3>
+                                 <ul class="Links_footer">
+                                    <li>PocketCredit@ejemplotech.com </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="copyright">
+                  <div class="container">
+                     <p>Copyright 2019 All Right Reserved By <a href="https://html.design/">Free html Templates</a></p>
+                  </div>
+               </div>
+            </div>
+         </footer>
+         <!-- end footer -->
+      </div>
+      <div class="overlay"></div>
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+       <script src="js/custom.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+             $("#sidebar").mCustomScrollbar({
+                 theme: "minimal"
+             });
+         
+             $('#dismiss, .overlay').on('click', function() {
+                 $('#sidebar').removeClass('active');
+                 $('.overlay').removeClass('active');
+             });
+         
+             $('#sidebarCollapse').on('click', function() {
+                 $('#sidebar').addClass('active');
+                 $('.overlay').addClass('active');
+                 $('.collapse.in').toggleClass('in');
+                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+             });
+         });
+      </script>
+      <script>
+         $(document).ready(function() {
+             $(".fancybox").fancybox({
+                 openEffect: "none",
+                 closeEffect: "none"
+             });
+         
+             $(".zoom").hover(function() {
+         
+                 $(this).addClass('transition');
+             }, function() {
+         
+                 $(this).removeClass('transition');
+             });
+         });
+      </script>
+     
+   </body>
+</html>
+
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+     // Seleccionar el botón "Send" por su ID
+     const sendButton = document.getElementById("send_btn");
+   
+     // Agregar un evento onClick al botón
+     sendButton.addEventListener("click", function() {
+       // Obtener los valores de los campos del formulario
+       const name = document.querySelector('input[name="Name"]').value;
+       const phoneNumber = document.querySelector('input[name="Phone number"]').value;
+       const email = document.querySelector('input[name="Email"]').value;
+       const message = document.querySelector('input[name="Message"]').value;
+   
+       // Crear una URL que incluya los valores del formulario como parámetros de consulta
+       const url = `formulario.html?Name=${name}&PhoneNumber=${phoneNumber}&Email=${email}&Message=${message}`;
+   
+       // Abrir la página "formulario.html" en una nueva pestaña
+       window.open(url, "_blank");
+     });
+   });
+</script>
+

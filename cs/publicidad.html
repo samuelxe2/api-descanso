@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mi Foro</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                margin: 0;
+                padding: 0;
+            }
+    
+            h1 {
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 20px;
+            }
+    
+            h2 {
+                margin-top: 20px;
+            }
+    
+            form {
+                background-color: #fff;
+                padding: 20px;
+                margin-top: 10px;
+            }
+    
+            label {
+                font-weight: bold;
+            }
+    
+            input, textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 5px 0;
+            }
+    
+            input[type="submit"] {
+                background-color: #333;
+                color: #fff;
+                cursor: pointer;
+            }
+    
+            ul {
+                list-style-type: none;
+            }
+    
+            li {
+                background-color: #fff;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ddd;
+            }
+        </style>
+    </head>
+<body>
+    <h1>Mi Foro</h1>
+
+    <!-- Formulario para crear un nuevo hilo -->
+    <h2>Crear un nuevo hilo</h2>
+    <form action="/api/crear-hilo" method="POST">
+        <label>Título del hilo:</label>
+        <input type="text" name="titulo" required>
+        <br>
+        <label>Autor:</label>
+        <input type="text" name="autor" required>
+        <br>
+        <label>Contenido del mensaje inicial:</label>
+        <textarea name="contenido" rows="4" required></textarea>
+        <br>
+        <input type="submit" value="Crear Hilo">
+    </form>
+
+    <!-- Formulario para agregar un mensaje a un hilo existente -->
+    <h2>Agregar un mensaje a un hilo</h2>
+    <form action="/api/agregar-mensaje" method="POST">
+        <label>ID del hilo:</label>
+        <input type="text" name="hiloId" required>
+        <br>
+        <label>Autor del mensaje:</label>
+        <input type="text" name="autor" required>
+        <br>
+        <label>Contenido del mensaje:</label>
+        <textarea name="contenido" rows="4" required></textarea>
+        <br>
+        <input type="submit" value="Agregar Mensaje">
+    </form>
+
+    <!-- Lista de hilos -->
+    <h2>Hilos del Foro</h2>
+    <ul id="lista-hilos">
+        <!-- Los hilos se cargarán dinámicamente aquí usando JavaScript -->
+    </ul>
+
+    <script>
+        // Función para cargar y mostrar la lista de hilos desde el servidor
+        function cargarHilos() {
+            fetch('/api/obtener-hilos')
+                .then(response => response.json())
+                .then(data => {
+                    const listaHilos = document.getElementById('lista-hilos');
+                    listaHilos.innerHTML = ''; // Limpiamos la lista antes de actualizar
+    
+                    data.forEach(hilo => {
+                        const li = document.createElement('li');
+                        li.textContent = hilo.titulo;
+                        listaHilos.appendChild(li);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al cargar hilos:', error);
+                });
+        }
+    
+        // Llamar a la función para cargar hilos cuando la página se cargue
+        cargarHilos();
+    </script>
+</body>
+</html>

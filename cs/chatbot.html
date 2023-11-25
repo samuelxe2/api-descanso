@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot - Préstamos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .chat-container {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300px;
+        }
+
+        .chat-header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .chat-box {
+            height: 200px;
+            overflow-y: scroll;
+            padding: 10px;
+        }
+
+        .chat-input {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #eee;
+        }
+
+        input {
+            flex: 1;
+            padding: 8px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .message.bot-message {
+            color: #1E90FF; /* Azul para respuestas del bot */
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Chat Bot - Préstamos</h2>
+        </div>
+        <div class="chat-box" id="chatBox">
+            <!-- Aquí se mostrarán los mensajes -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Escribe un mensaje...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const userInputElement = document.getElementById('userInput');
+            const chatBoxElement = document.getElementById('chatBox');
+
+            function sendMessage() {
+                const userInput = userInputElement.value;
+                if (userInput.trim() === '') return;
+
+                // Mostrar el mensaje del usuario en el chat
+                appendMessage(`You: ${userInput}`);
+
+                // Lógica del chat bot para respuestas sobre préstamos.
+                setTimeout(function () {
+                    let botMessage;
+                    if (userInput.toLowerCase().includes('prestamo')) {
+                        botMessage = "Para solicitar un préstamo, puedes visitar nuestra página de solicitud en línea y completar el formulario. ¿Necesitas más información?";
+                    } else if (userInput.toLowerCase().includes('informacion')) {
+                        botMessage = "Claro, ¿sobre qué servicios específicos necesitas información? Estoy aquí para ayudar.";
+                    } else {
+                        botMessage = "Lo siento, no entendí tu pregunta. ¿Puedes preguntar de nuevo o proporcionar más detalles?";
+                    }
+
+                    // Mostrar la respuesta del bot en el chat
+                    appendMessage(`Bot: ${botMessage}`);
+                }, 1000);
+
+                userInputElement.value = '';
+            }
+
+            function appendMessage(message) {
+                const messageElement = document.createElement('div');
+                messageElement.innerText = message;
+                chatBoxElement.appendChild(messageElement);
+            }
+
+            document.getElementById('userInput').addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
